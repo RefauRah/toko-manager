@@ -15,9 +15,11 @@
     "test": "node scripts/test-live-suite.mjs",
     "test:tier": "node scripts/test-tier-rules.mjs"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "better-sqlite3": "^11.8.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "jose": "^5.9.6",
@@ -34,6 +36,9 @@
     "tailwind-merge": "^2.5.4",
     "xlsx": "^0.18.5",
     "zod": "^3.23.8"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.8.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

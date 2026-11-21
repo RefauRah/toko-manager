@@ -35,6 +35,13 @@ function createDb(): Knex {
     });
   }
 
+  // Guard for Vercel serverless environment
+  if (process.env.VERCEL) {
+    console.warn(
+      "[TokoManager] PERINGATAN: Berjalan di lingkungan Vercel tanpa DATABASE_URL. Pastikan environment variable DATABASE_URL (Supabase PostgreSQL) telah dikonfigurasi di Vercel Project Settings."
+    );
+  }
+
   const dataDir = path.resolve(process.cwd(), "data");
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
