@@ -16,7 +16,7 @@
     "test:tier": "node scripts/test-tier-rules.mjs"
   },
   "engines": {
-    "node": "20.x"
+    "node": "26.x"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -37,12 +37,8 @@
     "xlsx": "^0.18.5",
     "zod": "^3.23.8"
   },
-  "optionalDependencies": {
-    "better-sqlite3": "^11.8.1"
-  },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
-    "@types/better-sqlite3": "^7.6.12",
     "@types/node": "^20.17.6",
     "@types/pg": "^8.11.10",
     "@types/react": "^18.3.12",

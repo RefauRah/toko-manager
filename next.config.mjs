@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    serverComponentsExternalPackages: ['knex', 'better-sqlite3', 'pg', 'bcryptjs']
+    serverComponentsExternalPackages: ['knex', 'pg', 'bcryptjs']
   }
 };
 
