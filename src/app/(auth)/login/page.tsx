@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Store, ShieldCheck, ArrowRight, Sparkles, User, ShoppingBag } from "lucide-react";
+import { Store, ArrowRight, Sparkles } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -40,11 +40,6 @@ export default function LoginPage() {
     } finally {
       setLoading(false);
     }
-  }
-
-  function setDemoAccount(em: string, pw: string) {
-    setEmail(em);
-    setPassword(pw);
   }
 
   return (
@@ -107,65 +102,6 @@ export default function LoginPage() {
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>
-
-          {/* Quick Demo Logins for Testing */}
-          <div className="mt-6 pt-6 border-t border-slate-100">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider text-center mb-3">
-              ⚡ Akun Demo Siap Pakai:
-            </p>
-            <div className="space-y-2">
-              <button
-                type="button"
-                onClick={() => setDemoAccount("owner@toko.com", "Toko123!")}
-                className="w-full flex items-center justify-between p-2.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/50 text-left transition group text-xs"
-              >
-                <div className="flex items-center space-x-2">
-                  <User className="w-4 h-4 text-indigo-600" />
-                  <div>
-                    <p className="font-bold text-slate-800">Owner Toko (Demo Pro)</p>
-                    <p className="text-[11px] text-slate-400">owner@toko.com</p>
-                  </div>
-                </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">
-                  Paket Pro
-                </span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setDemoAccount("kasir@toko.com", "Toko123!")}
-                className="w-full flex items-center justify-between p-2.5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/50 text-left transition group text-xs"
-              >
-                <div className="flex items-center space-x-2">
-                  <ShoppingBag className="w-4 h-4 text-emerald-600" />
-                  <div>
-                    <p className="font-bold text-slate-800">Kasir Toko (Staff)</p>
-                    <p className="text-[11px] text-slate-400">kasir@toko.com</p>
-                  </div>
-                </div>
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600">
-                  Kasir Role
-                </span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setDemoAccount("admin@tokomanager.com", "Admin12345!")}
-                className="w-full flex items-center justify-between p-2.5 rounded-xl border border-slate-900 bg-slate-900 text-white hover:bg-slate-800 text-left transition text-xs"
-              >
-                <div className="flex items-center space-x-2">
-                  <ShieldCheck className="w-4 h-4 text-amber-400" />
-                  <div>
-                    <p className="font-bold text-amber-400">Super Admin (Penyedia Layanan)</p>
-                    <p className="text-[11px] text-slate-400">admin@tokomanager.com</p>
-                  </div>
-                </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-400 text-slate-900">
-                  Manage Client
-                </span>
-              </button>
-            </div>
-          </div>
 
           <div className="mt-6 text-center text-xs text-slate-500">
             Belum punya akun toko?{" "}
